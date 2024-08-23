@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+html {
+    --theme__color: #278ea5;
+}
+
+* {
+    font-family: Lato;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, span {
+    color: #242424;
+    text-align: center;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 32px;
+
+}
+
+p {
+    line-height: 1.3;
+    font-size: 16px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.text--blue {
+    color: var( --theme__color );
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.row {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* NAVBAR */
+
+nav {
+    height: 80px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav__link--list {
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.nav__link--anchor {
+    margin: 0 12px;
+    color: #242424;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav__link--anchor-primary {
+    background-color: var( --theme__color );
+    padding: 8px 20px;
+    border-radius: 100px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.nav__link--anchor-primary:hover {
+    background-color: #185967;
+}
+
+.personal__logo {
+    font-size: 24px;
+    color: #278ea5;
+    font-weight: bold;
+    margin: 0 12px;
+    margin-left: 32px;
+}
+
+
+/* ABOUT ME */
+
+#about-me {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me__info--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-me__picture--mask {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    margin-bottom: 28px;
+}
+
+.about-me__picture {
+    width: 100%;
+}
+
+.about-me__info--paragraph {
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+.about-me__links {
+    margin-top: 16px;
+}
+
+.about-me__links a {
+    text-decoration: none;
+    color: var( --theme__color );
+    font-size: 20px;
+    padding: 0 8px;
+}
+
+.about-me__image {
+    width: 100%;
+}
+
+.about-me__img--container {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin-top: 80px;
+}

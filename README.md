@@ -1,3 +1,3 @@
 # Personal Portfolio
 
-This project is deployed (here.)[https://github.com/xdrewcodes]
+This project is deployed [here.](https://github.com/xdrewcodes)

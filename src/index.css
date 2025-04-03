@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Mono+One&family=Signika:wght@300..700&display=swap');
 
 * {
@@ -64,10 +63,23 @@ nav {
   line-height: 9.5rem;
   letter-spacing: -.55rem;
   background-image: linear-gradient(to left top, #3e5f6a, #416470, #446976, #476f7d, #4a7483, #4a7887, #4a7d8b, #4a818e, #48868f, #488b8f, #498f8f, #4c948d);
-  background-size: cover;
+  background-size: 100vw 40vh;
   background-clip: border-box;
   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.landing__subtitle {
+  font-size: 2rem;
+  line-height: 2.3rem;
+  background-image: linear-gradient(to left top, #3e5f6a, #416470, #446976, #476f7d, #4a7483, #4a7887, #4a7d8b, #4a818e, #48868f, #488b8f, #498f8f, #4c948d);
+  background-size: 100vw 40vh;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  width: 250px;
+  left: 58.5vw;
+  top: 33.8vh;
 }
 
 

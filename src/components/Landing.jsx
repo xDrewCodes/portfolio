@@ -4,7 +4,7 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/all'
 
-gsap.registerPlugin( ScrollTrigger )
+gsap.registerPlugin(ScrollTrigger)
 
 const Landing = () => {
 
@@ -12,8 +12,9 @@ const Landing = () => {
 
         const tl = gsap.timeline({
             scrollTrigger: {
+                scrub: 1,
                 trigger: '#projects',
-            }
+            },
         })
 
     })
@@ -22,6 +23,8 @@ const Landing = () => {
         <section id="landing">
             <div className="row center">
                 <h1 className="landing__title">Drew Allred</h1>
+                <h3 className="landing__subtitle">A Frontend Web Developer</h3>
+
             </div>
         </section>
     )

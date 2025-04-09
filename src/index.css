@@ -10,7 +10,7 @@
 
 .row {
   width: 100%;
-  max-width: 1024px;
+  max-width: 932px;
 }
 
 .center {
@@ -30,20 +30,19 @@
 
 nav {
   position: fixed;
-  top: 30px;
+  top: 15px;
   left: 50%;
   transform: translate(-50%);
   height: 50px;
-  background-image: linear-gradient(to left top, #3e5f6a, #3e606b, #3e616c, #3e626e, #3e636f, #3f6470, #3f6471, #406572, #426672, #446773, #456873, #476974);
-  background-position: 25% 25%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: end;
   align-items: center;
   border-radius: 8px;
+  color: #393a39;
 }
 
-.nav__item {
-  color: #D0DDD0;
+.nav__item:not(:last-child) {
+  margin-right: 48px;
 }
 
 
@@ -52,34 +51,53 @@ nav {
 #landing {
   width: 100%;
   height: 100vh;
-  background-color: #E5E5E5;
+  background-color: white;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.landing__title--container {
+  background: rgb(218, 219, 215);
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+canvas {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  z-index: 0;
 }
 
 .landing__title {
-  font-size: 12rem;
-  line-height: 9.5rem;
-  letter-spacing: -.55rem;
-  background-image: linear-gradient(to left top, #3e5f6a, #416470, #446976, #476f7d, #4a7483, #4a7887, #4a7d8b, #4a818e, #48868f, #488b8f, #498f8f, #4c948d);
-  background-size: 100vw 40vh;
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 6.5rem;
+  line-height: 7rem;
+  letter-spacing: -.25rem;
+  color: #393a39;
+  z-index: 1;
 }
 
 .landing__subtitle {
-  font-size: 2rem;
+  font-size: 2.25rem;
   line-height: 2.3rem;
-  background-image: linear-gradient(to left top, #3e5f6a, #416470, #446976, #476f7d, #4a7483, #4a7887, #4a7d8b, #4a818e, #48868f, #488b8f, #498f8f, #4c948d);
-  background-size: 100vw 40vh;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: absolute;
-  width: 250px;
-  left: 58.5vw;
-  top: 33.8vh;
+  letter-spacing: 0.5rem;
+  color: #393a39;
+  z-index: 1;
+}
+
+.landing__hero--container {
+  width: 100%;
+  height: calc( 60% - 80px );
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 

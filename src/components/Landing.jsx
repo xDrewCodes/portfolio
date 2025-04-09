@@ -57,15 +57,6 @@ const Landing = () => {
         }
     }, [])
 
-    useGSAP(() => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                scrub: 1,
-                trigger: '#projects',
-            },
-        })
-    })
-
     return (
         <section id="landing">
             <div className="landing__title--container">

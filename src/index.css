@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Mono+One&family=Signika:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Mono+One&family=Signika:wght@300..700&display=swap');
 
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Rubik Mono One';
+  font-family: 'Averia Serif Libre';
 }
 
 /* GLOBAL */
@@ -25,20 +26,37 @@
   transform: translate(-50%);
 }
 
+.title__orange {
+  color: #FBB957;
+}
+
+.title__green {
+  color: #A2CE73;
+}
+
 
 /* NAV */
 
 nav {
+  z-index: 3;
   position: fixed;
-  top: 15px;
   left: 50%;
   transform: translate(-50%);
   height: 50px;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
   border-radius: 8px;
   color: #393a39;
+  background-color: white;
+}
+
+.nav__logo {
+  font-size: 1.4rem;
+}
+
+nav div {
+  display: flex;
 }
 
 .nav__item:not(:last-child) {
@@ -58,46 +76,38 @@ nav {
 }
 
 .landing__title--container {
-  background: rgb(218, 219, 215);
   width: 100%;
-  height: 40%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-canvas {
-  position: absolute;
-  top: 80px;
-  left: 0;
-  width: 100%;
-  height: 40%;
-  z-index: 0;
-}
-
 .landing__title {
-  font-size: 6.5rem;
-  line-height: 7rem;
+  font-size: 5rem;
+  line-height: 5.5rem;
   letter-spacing: -.25rem;
   color: #393a39;
   z-index: 1;
 }
 
 .landing__subtitle {
-  font-size: 2.25rem;
-  line-height: 2.3rem;
-  letter-spacing: 0.5rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.2rem;
   color: #393a39;
   z-index: 1;
 }
 
-.landing__hero--container {
-  width: 100%;
-  height: calc( 60% - 80px );
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.landing__button {
+  font-size: 1.2rem;
+  color: white;
+  background-color: #FBB957;
+  padding: 12px 28px;
+  margin-top: 24px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 
@@ -109,5 +119,5 @@ canvas {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to left top, #3e5f6a, #416470, #446976, #476f7d, #4a7483, #4a7887, #4a7d8b, #4a818e, #48868f, #488b8f, #498f8f, #4c948d);
+  background-color: #efefef;
 }

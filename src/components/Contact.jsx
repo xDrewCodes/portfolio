@@ -4,7 +4,11 @@ import React from 'react'
 const Contact = () => {
     return (
         <section id="contact">
-            <div className="section__title"><span className="title__orange">Contact</span> Me.</div>
+            <div className="section__title">
+                <span className="corner-accent-start"></span>
+                <span className="title__orange">Contact</span> Me.
+                <span className="corner-accent-end"></span>
+            </div>
             <div className="contact__form">
                 <div className="contact__boxes">
                     <input type="text" placeholder="Name" className="contact__name" />

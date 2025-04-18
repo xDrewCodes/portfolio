@@ -7,6 +7,10 @@
   font-family: 'Averia Serif Libre';
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* GLOBAL */
 
 .row {
@@ -49,7 +53,7 @@
   border-left: none;
   border-bottom: none;
   margin-left: 8px;
-  transform: translate( -4px, -12px);
+  transform: translate(-4px, -12px);
 }
 
 .corner-accent-start {
@@ -60,7 +64,7 @@
   border-right: none;
   border-top: none;
   margin-left: 8px;
-  transform: translate( -4px, 12px);
+  transform: translate(-4px, 12px);
 }
 
 
@@ -70,7 +74,7 @@ nav {
   z-index: 3;
   position: fixed;
   width: 100%;
-  height: 50px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,10 +101,17 @@ nav div {
 
 .nav__item {
   cursor: pointer;
+  padding: 12px 28px;
+  border-radius: 4px;
+  transition: all .2s ease;
+}
+
+.nav__item:hover {
+  background-color: #dddddd;
 }
 
 .nav__item:not(:last-child) {
-  margin-right: 48px;
+  margin-right: 16px;
 }
 
 
@@ -151,9 +162,6 @@ nav div {
   cursor: pointer;
   border-radius: 4px;
   transition: all .2s ease;
-}
-
-.landing__button {
   position: relative;
   overflow: hidden;
 }
@@ -176,7 +184,6 @@ nav div {
 
 .landing__button:hover {
   scale: 1.01;
-  transform: translateY(0px);
   box-shadow: 0 15px 25px -5px #393a3927;
 }
 
@@ -206,21 +213,21 @@ nav div {
   pointer-events: none;
 }
 
-.projects__container:hover > *,
-.projects__container:focus-within > * {
+.projects__container:hover>*,
+.projects__container:focus-within>* {
   opacity: 0.4;
 }
 
 .project {
-  height: calc( 100% - 5px );
+  height: calc(100% - 5px);
   width: fit-content;
   cursor: pointer;
   transition: inherit;
   pointer-events: auto;
 }
 
-.projects__container:focus-within > :focus,
-.projects__container:hover > :hover {
+.projects__container:focus-within> :focus,
+.projects__container:hover> :hover {
   opacity: 1;
   scale: 1.03;
   transform: translateY(-5px);
@@ -330,15 +337,24 @@ nav div {
   padding: 16px 16px;
   border-radius: 4px;
   background-color: #dddddd;
+  border: 2px solid #dddddd;
+  transition: all .2s ease;
+}
+
+.contact__form input:hover,
+.contact__form textarea:hover,
+.contact__form input:focus,
+.contact__form textarea:focus {
+  background-color: #eeeeee;
 }
 
 .contact__boxes {
   margin-top: 32px;
   display: grid;
   grid-template:
-  "name mail 0" 1fr
-  "msg msg msg" 1fr
-  "msg msg msg" 1fr / 1fr 1fr 1fr;
+    "name mail 0" 1fr
+    "msg msg msg" 1fr
+    "msg msg msg" 1fr / 1fr 1fr 1fr;
   gap: 12px;
 }
 
@@ -367,6 +383,29 @@ nav div {
   cursor: pointer;
   border-radius: 4px;
   transition: all .2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact__submit::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.288), transparent);
+  transform: skewX(-10deg);
+  transition: left 0.5s ease;
+}
+
+.contact__submit:hover::after {
+  left: 125%;
+}
+
+.contact__submit:hover {
+  scale: 1.01;
+  box-shadow: 0 15px 25px -5px #393a3927;
 }
 
 
@@ -388,6 +427,7 @@ footer {
 
 .footer__link {
   margin: 0 14px;
+  cursor: pointer;
 }
 
 .footer__bottom {
@@ -399,6 +439,12 @@ footer {
   margin-right: 8px;
   height: 32px;
   cursor: pointer;
+  transition: all .2s ease;
+}
+
+.footer__socials img:hover {
+  rotate: -8deg;
+  transform: translateY(-4px);
 }
 
 .footer__copyright {

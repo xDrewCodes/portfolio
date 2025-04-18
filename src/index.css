@@ -41,6 +41,28 @@
   letter-spacing: 1px;
 }
 
+.corner-accent-end {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #393a39;
+  border-left: none;
+  border-bottom: none;
+  margin-left: 8px;
+  transform: translate( -4px, -12px);
+}
+
+.corner-accent-start {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #393a39;
+  border-right: none;
+  border-top: none;
+  margin-left: 8px;
+  transform: translate( -4px, 12px);
+}
+
 
 /* NAV */
 
@@ -90,15 +112,16 @@ nav div {
   background-color: white;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: end;
 }
 
 .landing__title--container {
-  width: 100%;
+  width: 700px;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 }
 
@@ -113,6 +136,7 @@ nav div {
 .landing__subtitle {
   font-size: 2rem;
   line-height: 2.5rem;
+  width: 100%;
   letter-spacing: 0.2rem;
   color: #393a39;
   z-index: 1;
@@ -129,9 +153,30 @@ nav div {
   transition: all .2s ease;
 }
 
+.landing__button {
+  position: relative;
+  overflow: hidden;
+}
+
+.landing__button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.288), transparent);
+  transform: skewX(-10deg);
+  transition: left 0.5s ease;
+}
+
+.landing__button:hover::after {
+  left: 125%;
+}
+
 .landing__button:hover {
   scale: 1.01;
-  transform: translateY(-2.5px);
+  transform: translateY(0px);
   box-shadow: 0 15px 25px -5px #393a3927;
 }
 
@@ -139,7 +184,7 @@ nav div {
 /* PROJECTS */
 
 #projects {
-  height: 120vh;
+  padding: 15vh 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -150,47 +195,43 @@ nav div {
 
 .projects__container {
   margin-top: 5%;
-  width: 90%;
+  width: 80%;
   height: 60%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 24px;
+  gap: 32px;
   flex-wrap: wrap;
+  align-content: start;
+  transition: all .2s ease;
+  pointer-events: none;
+}
+
+.projects__container:hover > *,
+.projects__container:focus-within > * {
+  opacity: 0.4;
 }
 
 .project {
-  height: fit-content;
+  height: calc( 100% - 5px );
   width: fit-content;
   cursor: pointer;
+  transition: inherit;
+  pointer-events: auto;
 }
 
-.project img:hover {
+.projects__container:focus-within > :focus,
+.projects__container:hover > :hover {
+  opacity: 1;
   scale: 1.03;
   transform: translateY(-5px);
   box-shadow: 0 15px 25px -5px #393a3927;
 }
 
 .projects__container img {
+  border-radius: 4px;
   width: 100%;
   aspect-ratio: 2/1;
-  transition: all .2s ease;
-}
-
-.project__link {
-  background-color: #ffffff;
-  aspect-ratio: 2/1;
-  transition: all .2s ease;
-  cursor: pointer;
-  width: 75%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-}
-
-.project__link:hover {
-  scale: 1.03;
-  box-shadow: 0 15px 25px -5px #393a3927;
+  transition: inherit;
 }
 
 
@@ -209,6 +250,7 @@ nav div {
   margin-top: 5%;
   height: fit-content;
   width: fit-content;
+  max-width: 700px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 16px;
@@ -221,14 +263,13 @@ nav div {
 }
 
 .stack__item img {
-  height: 80px;
+  width: 100%;
   aspect-ratio: 1/1;
 }
 
 /* stack top hover logic */
-.stack__item:nth-child(-n+7)::before {
+.stack__item:nth-child(-n+7) .stack__label {
   opacity: 0;
-  content: 'language';
   position: absolute;
   top: -24px;
   left: 50%;
@@ -241,14 +282,9 @@ nav div {
   transform: translateY(-10px);
 }
 
-.stack__item:hover::before {
-  opacity: 1;
-}
-
 /* stack bottom hover logic */
-.stack__item:not(:nth-child(-n+7))::after {
+.stack__item:not(:nth-child(-n+7)) .stack__label {
   opacity: 0;
-  content: 'language';
   position: absolute;
   bottom: -18px;
   left: 50%;
@@ -261,7 +297,7 @@ nav div {
   transform: translateY(10px);
 }
 
-.stack__item:not(:nth-child(-n+7)):hover::after {
+.stack__item:hover .stack__label {
   opacity: 1;
 }
 
@@ -276,4 +312,95 @@ nav div {
   justify-content: center;
   flex-direction: column;
   background-color: #F2F2F1;
+}
+
+.contact__form {
+  width: 33%;
+}
+
+.contact__form input::placeholder,
+.contact__form textarea::placeholder {
+  color: #393a39;
+}
+
+.contact__form input,
+.contact__form textarea {
+  border: none;
+  outline: none;
+  padding: 16px 16px;
+  border-radius: 4px;
+  background-color: #dddddd;
+}
+
+.contact__boxes {
+  margin-top: 32px;
+  display: grid;
+  grid-template:
+  "name mail 0" 1fr
+  "msg msg msg" 1fr
+  "msg msg msg" 1fr / 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+.contact__name {
+  grid-area: name;
+}
+
+.contact__email {
+  grid-area: mail;
+}
+
+.contact__message {
+  grid-area: msg;
+  resize: none;
+  height: 7vw;
+}
+
+.contact__submit {
+  font-size: 1.2rem;
+  width: fit-content;
+  color: white;
+  background-color: #FBB957;
+  padding: 12px 28px;
+  margin-top: 12px;
+  justify-self: start;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all .2s ease;
+}
+
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 30vh;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: center;
+  margin: 18px 0;
+}
+
+.footer__link {
+  margin: 0 14px;
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+}
+
+.footer__socials img {
+  margin-right: 8px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.footer__copyright {
+  margin-left: 16px;
 }

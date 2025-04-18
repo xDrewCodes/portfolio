@@ -23,45 +23,59 @@ const Stack = () => {
             <div className="stack__container">
                 <div className="stack__item">
                     <img src={JSIcon} alt="JS" />
+                    <span className="stack__label">JavaScript</span>
                 </div>
                 <div className="stack__item">
                     <img src={CSSIcon} alt="JS" />
+                    <span className="stack__label">CSS</span>
                 </div>
                 <div className="stack__item">
                     <img src={HTMLIcon} alt="JS" />
+                    <span className="stack__label">HTML</span>
                 </div>
                 <div className="stack__item">
                     <img src={ReactIcon} alt="JS" />
+                    <span className="stack__label">React</span>
                 </div>
                 <div className="stack__item">
                     <img src={GitHubIcon} alt="JS" />
+                    <span className="stack__label">GitHub</span>
                 </div>
                 <div className="stack__item">
                     <img src={FirebaseIcon} alt="JS" />
+                    <span className="stack__label">Firebase</span>
                 </div>
                 <div className="stack__item">
                     <img src={VSCodeIcon} alt="JS" />
+                    <span className="stack__label">VSCode</span>
                 </div>
                 <div className="stack__item">
                     <img src={PythonIcon} alt="JS" />
+                    <span className="stack__label">Python</span>
                 </div>
                 <div className="stack__item">
                     <img src={FigmaIcon} alt="JS" />
+                    <span className="stack__label">Figma</span>
                 </div>
                 <div className="stack__item">
                     <img src={CSIcon} alt="JS" />
+                    <span className="stack__label">C#</span>
                 </div>
                 <div className="stack__item">
                     <img src={VercelIcon} alt="JS" />
+                    <span className="stack__label">Vercel</span>
                 </div>
                 <div className="stack__item">
                     <img src={VSIcon} alt="JS" />
+                    <span className="stack__label">VStudio</span>
                 </div>
                 <div className="stack__item">
                     <img src={NextJSIcon} alt="JS" />
+                    <span className="stack__label">NextJS</span>
                 </div>
                 <div className="stack__item">
                     <img src={ReduxIcon} alt="JS" />
+                    <span className="stack__label">Redux</span>
                 </div>
             </div>
         </section>

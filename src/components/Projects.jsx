@@ -9,7 +9,10 @@ import TReactCover from '../assets/treact.png'
 const Projects = () => {
     return (
         <section id="projects">
-            <div className="section__title">My <span className="title__orange">Projects.</span></div>
+            <div className="section__title">
+            <span className="corner-accent-start"></span>
+            My <span className="title__orange">Projects.</span>
+            <span className="corner-accent-end"></span></div>
             <div className="projects__container">
                 <div className="project">
                     <img src={PrimeCover} alt="Prime Video Clone" />
@@ -26,7 +29,7 @@ const Projects = () => {
                 <div className="project">
                     <img src={TReactCover} alt="TReact Clone" />
                 </div>
-                <div className="project__link section__title">Check out my <span className="title__green">GitHub</span></div>
+                
             </div>
         </section>
     )

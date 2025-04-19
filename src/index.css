@@ -440,13 +440,14 @@ footer {
   }
 
   .landing__title {
-    font-size: 4rem;
+    font-size: 3.8rem;
     line-height: 4rem;
     text-align: center;
   }
 
   .landing__subtitle {
     font-size: 1.5rem;
+    line-height: 1.8rem;
     text-align: center;
   }
 
@@ -500,6 +501,7 @@ footer {
   }
 
   .contact__boxes {
+    
     grid-template:
       "name mail" 1fr
       "msg msg" 1fr
@@ -514,7 +516,8 @@ footer {
   .footer__links {
     display: flex;
     max-width: 50%;
-    flex-wrap: wrap-reverse;
+    flex-direction: column-reverse;
+    align-items: center;
   }
 
   .footer__bottom {

@@ -2,7 +2,6 @@
 import React from 'react'
 import LinkedInIcon from '../assets/icons/LinkedInFooter.png'
 import CodepenIcon from '../assets/icons/CodepenFooter.png'
-import DiscordIcon from '../assets/icons/DiscordFooter.png'
 import GitHubIcon from '../assets/icons/GitHubFooter.png'
 
 const Footer = () => {
@@ -18,10 +17,9 @@ const Footer = () => {
             </div>
             <div className="footer__bottom">
                 <div className="footer__socials">
-                    <img src={LinkedInIcon} alt="LinkedIn" />
-                    <img src={CodepenIcon} alt="Codepen" />
-                    <img src={DiscordIcon} alt="Discord" style={{scale: 0.8}} />
-                    <img src={GitHubIcon} alt="GitHub" />
+                    <a href="https://linkedin.com/in/drewallred" rel="noreferrer" target="_blank" ><img src={LinkedInIcon} alt="LinkedIn" /></a>
+                    <a href="https://codepen.io/driw" rel="noreferrer" target="_blank" ><img src={CodepenIcon} alt="Codepen" /></a>
+                    <a href="https://github.com/xdrewcodes" rel="noreferrer" target="_blank" ><img src={GitHubIcon} alt="GitHub" /></a>
                 </div>
                 <div className="footer__copyright">&copy;Copyright 2025 Drew Allred</div>
             </div>

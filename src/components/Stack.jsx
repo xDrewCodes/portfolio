@@ -17,6 +17,7 @@ import ReduxIcon from '../assets/icons/Redux.svg'
 
 
 const Stack = () => {
+
     return (
         <section id="stack">
             <div className="section__title">

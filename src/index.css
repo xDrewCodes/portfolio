@@ -13,6 +13,11 @@ html {
 
 /* GLOBAL */
 
+a {
+  text-decoration: none;
+  color: #393a39;
+}
+
 .row {
   width: 100%;
   max-width: 932px;

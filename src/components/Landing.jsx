@@ -15,7 +15,7 @@ const Landing = () => {
                     <span className="title__green"> frontend dev </span>
                     with a soft spot for slick UI and sharp JS.
                 </h3>
-                <div className="landing__button">Checkout my projects</div>
+                <a href="#projects"><div className="landing__button">Checkout my projects</div></a>
             </div>
         </section>
     )
